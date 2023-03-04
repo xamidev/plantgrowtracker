@@ -7,11 +7,44 @@
     </head>
 
     <body>
-    
+        
         <h1>Air Stats</h1>
-        <div id="temperature">-</div>
-        <div id="humidity">-</div>
-        <div id="pressure">-</div>
+        <table>
+            <tr>
+                <th>Metric</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <th>Temperature</th>
+                <th id="temperature">N/A</th>
+            </tr>
+            <tr>
+                <th>Humidity</th>
+                <th id="humidity">N/A</th>
+            </tr>
+            <tr>
+                <th>Pressure</th>
+                <th id="pressure">N/A</th>
+            </tr>
+            <tr>
+                <th>Air VPD</th>
+                <th id="airvpd">N/A</th>
+            </tr>
+            <tr>
+                <th>Presumed Leaf VPD</th>
+                <th id="leafvpd">N/A</th>
+            </tr>
+            <tr>
+                <th>Dew point</th>
+                <th id="dewpoint">N/A</th>
+            </tr>
+        </table>
+        
+        <div class="chart-container">
+            <canvas id="lineCanvas" aria-label="chart" role="img"></canvas>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
 
     </body>
     <script src="fetch.js"></script>

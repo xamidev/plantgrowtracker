@@ -1,4 +1,32 @@
-.data {
+h1 {
     text-align: center;
-    margin-top:20%;
+}
+
+html {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+table {
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+tr:nth-child(even) {
+    background-color: #D6EEEE;
+}
+
+th {
+    padding: 20px;
+}
+
+#error {
+    text-align: center;
+}
+
+.chart-container {
+    width: 50%;
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
