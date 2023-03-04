@@ -1,0 +1,1 @@
+sudo picocom /dev/serial/by-id/usb-MicroPython_Board_in_FS_mode_e660c0d1c759992f-if00 -b115200 -g /var/www/html/bme.txt
