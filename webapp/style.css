@@ -30,3 +30,17 @@ th {
     margin-left: auto;
     margin-right: auto;
 }
+
+#stats {
+    display: inline-block;
+    margin-right: 30px;
+    margin-top: 30px;
+}
+
+.chart-container {
+    display: inline-block;
+}
+
+#wrapper {
+    text-align: center;
+}

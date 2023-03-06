@@ -1,6 +1,8 @@
 var temperaturesArray = [];
 var pressuresArray = [];
 var humidityArray = [];
+var vpdArray = [];
+var dewPointArray = [];
 
 setInterval(function() {
 
@@ -20,8 +22,15 @@ setInterval(function() {
         document.getElementById('leafvpd').innerHTML = lastMeasures[4]
         document.getElementById('dewpoint').innerHTML = lastMeasures[5]
         
-        /* Chart.js line chart for all data */
+        /* Chart.js : data fetching for chart curves */
+
         temperaturesArray.push(lastMeasures[0].slice(0,-3));
+        humidityArray.push(lastMeasures[2].slice(0,-2));
+        /* pressuresArray.push(lastMeasures[1].slice(0,-4)); */
+        vpdArray.push(lastMeasures[3].slice(0,-4));
+        dewPointArray.push(lastMeasures[5].slice(0,-3));
+
+        /* Drawing the chart */
 
         const lineCanvas = document.getElementById("lineCanvas");
         const lineChart = new Chart(lineCanvas, {
@@ -36,25 +45,25 @@ setInterval(function() {
               },
               {
                   label: "Humidity",
-                  data: [28,47,141,72,121,109,175,97],
+                  data: humidityArray,
                   borderColor: "crimson",
                   backgroundColor: "red",
               },
-              {
+              /*{
                 label: "Pressure",
-                data: [997,1012,1014,986,980,1001,1013,970],
+                data: pressuresArray,
                 borderColor: "blue",
                 backgroundColor: "lightblue",
-              },
+              },*/
               {
                 label: "VPD",
-                data: [543,722,615,621,599,701,775,804],
+                data: vpdArray,
                 borderColor: "cyan",
                 backgroundColor: "darkcyan",
               },
               {
                 label: "Dew point",
-                data: [439,362,364,358,392,417,492,426],
+                data: dewPointArray,
                 borderColor: "darkorchid",
                 backgroundColor: "darkmagenta",
               }]
